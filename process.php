@@ -21,7 +21,7 @@ while($row = mysqli_fetch_object($result)){
     }
 
 }
-
+$name= $row->name;
 
 if($flag==0){
     header("Location:login.php?msg=dnm");

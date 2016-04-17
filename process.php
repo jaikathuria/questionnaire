@@ -22,6 +22,7 @@ while($row = mysqli_fetch_object($result)){
 
 }
 $name= $row->name;
+$uniqid=$row->uniqid;
 
 if($flag==0){
     header("Location:login.php?msg=dnm");
@@ -39,6 +40,8 @@ else{
      $_SESSION['token']='yes';
      $_SESSION['user']=$name;
      $_SESSION['type']=$type;
+     $_SESSION['uniqid']=$uniqid;
+        
     header("Location:homepage.php");
     }
 }

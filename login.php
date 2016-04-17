@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+session_start();
+if(!isset($_SESSION['token'])){
+    ?>
+    <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -130,3 +134,9 @@
             
     </body>
 </html>
+<?php
+}
+else{
+    header("Location:homepage.php");
+}
+?>

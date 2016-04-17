@@ -14,7 +14,7 @@ for($i=1;$i<=$noq;$i++){
     $tvd= $tv."d";
     $tvans= $tv."ans";
     $$tv= $_REQUEST[$tv];
-    $$tv= $$tv."¿".$_REQUEST[$tva]."¿".$_REQUEST[$tva]."¿".$_REQUEST[$tva]."¿".$_REQUEST[$tva]."¿".$_REQUEST[$tvans];
+    $$tv= $$tv."¿".$_REQUEST[$tva]."¿".$_REQUEST[$tvb]."¿".$_REQUEST[$tvc]."¿".$_REQUEST[$tvd]."¿".$_REQUEST[$tvans];
     $fields= $fields.", ".$tv;
     $fieldData= $fieldData.",'".$$tv."'";
 }
@@ -29,8 +29,7 @@ $query = "INSERT INTO testtable ".$fields." VALUES ".$fieldData;
      else{
          header("Location:panel.php?error=unsuccess");
      }
-
 ?>
 
 
-?>
+
